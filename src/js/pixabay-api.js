@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const IMAGES_PER_PAGE = 15;
+import { IMAGES_PER_PAGE } from './constants';
 
 export async function fetchImages(searchQuery, page = 1) {
   const response = await axios.get('https://pixabay.com/api/', {
