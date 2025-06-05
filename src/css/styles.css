@@ -1,0 +1,160 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('izitoast/dist/css/iziToast.min.css');
+@import url('simplelightbox/dist/simple-lightbox.min.css');
+
+body {
+  padding: 36px;
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  max-width: 371px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.button {
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  color: white;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  transition: background-color 250ms;
+}
+
+.button:hover {
+  background-color: #6c8cff;
+}
+
+.form-input {
+  border-radius: 4px;
+  border: 1px solid #808080;
+  transition: border-color 250ms;
+  outline: none;
+  flex-grow: 1;
+  height: 40px;
+  padding: 0 16px;
+}
+
+.form-input::placeholder {
+  color: #808080;
+}
+
+.form-input:hover {
+  border-color: #000000;
+}
+
+.form-input:focus {
+  border-color: #4e75ff;
+}
+
+.gallery {
+  width: 100%;
+  max-width: 1128px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-item {
+  background-color: #f0f0f0;
+  width: calc((100% - 48px) / 3);
+  aspect-ratio: 360 / 200;
+  border: 1px solid #808080;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item-info {
+  position: absolute;
+  inset: 0;
+  top: auto;
+  z-index: 1;
+  padding: 4px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #fff;
+}
+
+.gallery-item-info-item {
+  text-align: center;
+  font-size: 12px;
+}
+
+.gallery-item-info-title {
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.gallery-item-info-value {
+  font-weight: 400;
+  line-height: 2;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #4e75ff15;
+  border-bottom-color: #4e75ff;
+  border-radius: 50%;
+  margin-top: 32px;
+
+  animation: rotation 1s linear infinite;
+
+  display: none;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load-more {
+  display: none;
+  margin-top: 32px;
+}
+
+.visible {
+  display: block;
+}
