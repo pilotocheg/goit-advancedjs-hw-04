@@ -15,7 +15,5 @@ export async function fetchImages(searchQuery, page = 1) {
     },
   });
 
-  await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate network delay
-
   return response.data;
 }
